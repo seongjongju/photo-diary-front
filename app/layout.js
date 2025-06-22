@@ -1,4 +1,5 @@
 import Header from './components/include/Header';
+import '../src/app/globals.css';
 
 export const metadata = {
   title: '내 앱',

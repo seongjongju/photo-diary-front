@@ -31,8 +31,8 @@ const Contents = () => {
 
   return (
     <main className="main">
-      <ul className="filters">
-        <li>
+      <ul className="filters flex items-center mb-[30px]">
+        <li className="mr-[10px]">
           <button className="filters__button--ascending" onClick={handleAscending}>
             오름차순
           </button>
@@ -44,11 +44,11 @@ const Contents = () => {
         </li>
       </ul>
 
-      <Link href="/newview" className="new-view">
+      <Link href="/newview" className="new-view block w-fit ml-auto mb-[50px] font-semibold">
         새 일기 쓰기 +
       </Link>
 
-      <ul className="diary-list">
+      <ul className="diary-list grid grid-cols-5 gap-4">
         {sortedDiary.map((diary) => (
           <DiaryItem key={diary._id} diary={diary} />
         ))}
